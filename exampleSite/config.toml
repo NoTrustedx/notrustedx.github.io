@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "https://notrustedx.github.io"
 title = "Your Website Title"
 languageCode = "en-us"
 theme = "devise"
