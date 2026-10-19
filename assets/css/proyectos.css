@@ -1,0 +1,8 @@
+/* zEr[0]Trust — complemento de tarjetas de proyectos (no altera el tema base) */
+.project-grid .project-card { min-width:0; }
+.project-grid .project-card h3 { overflow-wrap:anywhere; }
+.project-grid .project-card .chip { white-space:normal; }
+.project-tech { font-size:12px; color:var(--muted); margin-top:auto; padding-top:12px; }
+.projects-note { color:var(--muted);font-size:13px;margin-top:32px; }
+.projects-note a { color:var(--accent);text-decoration:underline;text-underline-offset:3px; }
+@media(max-width:640px){.main-nav{flex-wrap:wrap;justify-content:center;gap:9px 13px}.main-nav a{white-space:nowrap}}
