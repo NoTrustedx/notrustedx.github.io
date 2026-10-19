@@ -1,0 +1,121 @@
+/*
+ * CyberSec — tema Red Vortex suave (propuesta no oficial)
+ * Capa de estilos no destructiva: cargar DESPUÉS de assets/css/style.css.
+ * Inspiración cromática: logotipo compartido (rojos profundos), acentos deliberadamente tenues.
+ * No reproduce ni afirma usar el CSS oficial de blog.red-vortex.com.
+ */
+:root {
+  color-scheme: dark;
+  --bg: #111318;
+  --surface: #1b1e24;
+  --surface-2: #22262d;
+  --card: #1b1e24;
+  --border: #34343c;
+  --text: #ecebef;
+  --muted: #b5b1ba;
+  --subtle: #9696a1;
+  --accent: #d9a0a2;         /* rojo empolvado para enlaces legibles */
+  --accent-2: #9e3943;       /* rojo vino de apoyo */
+  --rv-button: #9f454f;      /* color sólido, botones */
+  --rv-button-hover: #ad5862;
+  --rv-soft: rgba(158,57,67,.12);
+  --rv-soft-border: rgba(217,160,162,.27);
+  --shadow: 0 24px 65px rgba(0,0,0,.19);
+}
+:root[data-theme=light] {
+  color-scheme: light;
+  --bg: #faf9f8;
+  --surface: #fff;
+  --surface-2: #f3f1f1;
+  --card: #fff;
+  --border: #e2dcdf;
+  --text: #242329;
+  --muted: #625e68;
+  --subtle: #77737d;
+  --accent: #8b2731;
+  --accent-2: #ad6972;
+  --rv-button: #8b2731;
+  --rv-button-hover: #a43846;
+  --rv-soft: rgba(139,39,49,.055);
+  --rv-soft-border: rgba(139,39,49,.16);
+  --shadow: 0 20px 55px rgba(47,31,35,.07);
+}
+
+::selection { background: rgba(195,112,121,.35); }
+.site-header {
+  background: rgba(17,19,24,.92);
+  border-bottom-color: var(--border);
+}
+:root[data-theme=light] .site-header { background: rgba(250,249,248,.94); }
+.top-glow {
+  background: radial-gradient(ellipse, rgba(153,45,57,.12), transparent 72%);
+}
+.brand-symbol {
+  color: var(--accent);
+  border-color: var(--rv-soft-border);
+  background: var(--rv-soft);
+}
+.brand-dot, .main-nav a:hover, .footer-links a:hover { color: var(--accent); }
+.availability {
+  color: var(--accent);
+  border-color: var(--rv-soft-border);
+  background: var(--rv-soft);
+}
+.pulse { background: var(--accent); box-shadow: 0 0 10px rgba(183,78,88,.25); }
+.button-primary {
+  background: var(--rv-button);
+  color: #ffffff;
+  box-shadow: none;
+}
+.button-primary:hover { background: var(--rv-button-hover); color: #ffffff; }
+.button-outline:hover { border-color: var(--accent); }
+.theme-toggle:hover { border-color: var(--accent); }
+.hero-display {
+  background: linear-gradient(145deg, #24212a, #16171d);
+  border-color: #48333b;
+  box-shadow: 0 22px 52px rgba(0,0,0,.25), 0 0 38px rgba(130,34,45,.055);
+  transform: none;
+}
+.terminal-top { border-bottom-color: #3d333b; }
+.terminal-top>span:last-child { color: #d9a0a2; }
+.line-green { color: #d9a0a2; }
+.cursor { color: #d9a0a2; }
+.terminal-grid {
+  background-image:
+    linear-gradient(rgba(171,74,86,.48) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(171,74,86,.48) 1px, transparent 1px);
+  opacity: .17;
+}
+.tiny-dot { background: var(--accent); }
+.topic-icon,
+.profile-avatar { background: var(--rv-soft); }
+.topic-card:hover, .post-card:hover, .tag:hover {
+  border-color: var(--rv-soft-border);
+}
+.chip {
+  color: var(--accent);
+  border-color: var(--rv-soft-border);
+  background: var(--rv-soft);
+}
+.newsletter-panel {
+  background: radial-gradient(ellipse at 78% 14%, rgba(158,57,67,.085), transparent 45%), var(--surface);
+}
+.article-head {
+  background: radial-gradient(ellipse at top right, rgba(158,57,67,.085), transparent 65%);
+}
+.article-body blockquote {
+  background: var(--rv-soft);
+  border-left-color: var(--accent-2);
+}
+.article-body pre { background: #15151a; border-color: #393039; color: #e8e5e9; }
+.article-body code { color: var(--accent); }
+.article-body pre code { color: inherit; }
+:root[data-theme=light] .article-body pre code { color: #e8e5e9; }
+:root[data-theme=light] .hero-display { color: #ecebef; }
+:root[data-theme=light] .terminal-top { color: #a9a1aa; }
+:root[data-theme=light] .line-muted { color: #a9a1aa; }
+:root[data-theme=light] .line-white { color: #eee9ec; }
+:root[data-theme=light] .terminal-lines b { color: #f4e9ee; }
+:root[data-theme=light] .terminal-top>span:last-child,
+:root[data-theme=light] .line-green,
+:root[data-theme=light] .cursor { color: #e0a7ae; }
