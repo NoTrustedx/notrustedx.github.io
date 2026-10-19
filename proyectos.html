@@ -1,0 +1,25 @@
+---
+layout: default
+title: "Proyectos y repositorios"
+description: "Selección de proyectos públicos de código y herramientas de zEr[0]Trust."
+permalink: /proyectos/
+---
+<section class="container inner-page projects-page">
+  <div class="page-heading">
+    <span class="eyebrow">CÓDIGO ABIERTO · INVESTIGACIÓN</span>
+    <h1>Proyectos y repositorios<span class="accent">.</span></h1>
+    <p>Herramientas, pruebas de concepto y utilidades de laboratorio. Revisa cada README y utiliza las herramientas únicamente en entornos autorizados.</p>
+  </div>
+  <div class="post-grid project-grid">
+  {% for proyecto in site.data.proyectos %}
+    <article class="post-card project-card">
+      <div class="card-top"><span class="chip">{{ proyecto.categoria | escape }}</span><span aria-hidden="true">⌘</span></div>
+      <h3>{{ proyecto.nombre | escape }}</h3>
+      <p>{{ proyecto.descripcion | escape }}</p>
+      <div class="project-tech">{{ proyecto.tecnologias | escape }}</div>
+      <div class="card-bottom"><span>Repositorio público</span><a href="{{ proyecto.url | escape }}" target="_blank" rel="noopener noreferrer">Ver en GitHub ↗</a></div>
+    </article>
+  {% endfor %}
+  </div>
+  <p class="projects-note">Repositorio original y documentación disponibles en <a href="https://github.com/NoTrustedx" target="_blank" rel="noopener noreferrer">GitHub / NoTrustedx ↗</a>.</p>
+</section>
